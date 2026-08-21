@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="site-title">Photo Gallery</h1>
+    <p class="site-subtitle">A clean, responsive gallery with lightbox</p>
+  </header>
+
+  <main>
+    <section class="gallery" aria-label="Photo gallery">
+      <!-- Repeat this .photo block for each image -->
+      <figure class="photo">
+        <button class="photo-btn" data-index="0" aria-label="Open photo 1">
+          <img src="Image1.jpg" alt="Photo 1 description" loading="lazy" />
+        </button>
+        <figcaption class="caption">Photo 1 caption</figcaption>
+      </figure>
+
+      <figure class="photo">
+        <button class="photo-btn" data-index="1" aria-label="Open photo 2">
+          <img src="Image2.jpg" alt="Photo 2 description" loading="lazy" />
+        </button>
+        <figcaption class="caption">Photo 2 caption</figcaption>
+      </figure>
+
+      <figure class="photo">
+        <button class="photo-btn" data-index="2" aria-label="Open photo 3">
+          <img src="Image3.jpg" alt="Photo 3 description" loading="lazy" />
+        </button>
+        <figcaption class="caption">Photo 3 caption</figcaption>
+      </figure>
+
+      <!-- Add more photos as needed -->
+    </section>
+  </main>
+
+  <!-- Lightbox modal -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+    <button id="closeBtn" class="lightbox-close" aria-label="Close viewer">&times;</button>
+    <button id="prevBtn" class="lightbox-nav" aria-label="Previous image">&#10094;</button>
+    <div class="lightbox-content">
+      <img id="lightboxImage" src="" alt="" />
+      <p id="lightboxCaption" class="lightbox-caption"></p>
+    </div>
+    <button id="nextBtn" class="lightbox-nav" aria-label="Next image">&#10095;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
